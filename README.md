@@ -1,8 +1,8 @@
 # Ideal Weather Weeks
 
-Link for front-end repository: https://github.com/ebond07/final_project
-Link for back-end repository:
-Link for project presentation video: https://youtu.be/-OOG8VzQD8I
+Link for front-end repository: https://github.com/ebond07/final_project <br />
+Link for back-end repository: <br />
+Link for project presentation video: https://youtu.be/-OOG8VzQD8I <br />
 
 ## Project Description
 
@@ -61,7 +61,7 @@ For updating a specific day, http://localhost:8080/api/days/${dayID} should be u
 
 ### Front-End 
 
-![Screenshot_20221224_041224](https://user-images.githubusercontent.com/43860533/209451126-64012f78-4054-4c08-af88-08d766abfe1e.png)
+![Screenshot_20221224_031705](https://user-images.githubusercontent.com/43860533/209451193-9ffbe4a5-2fbe-4d96-a208-5718645de8d7.png)
 
 The two drop down menus at the top of the screen are used for selecting the week which you either want to delete or initialize depending on the drop down menu selected.
 
