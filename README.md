@@ -1,7 +1,7 @@
 # Ideal Weather Weeks
 
 Link for front-end repository: https://github.com/ebond07/final_project <br />
-Link for back-end repository: <br />
+Link for back-end repository: https://github.com/ebond07/final_project_backend <br />
 Link for project presentation video: https://youtu.be/-OOG8VzQD8I <br />
 
 ## Project Description
