@@ -41,7 +41,6 @@ function Response(){
     return(
         <div>
             <h3>Weekly Average Temperature</h3>
-            <h5></h5>
         </div>
     );
 }

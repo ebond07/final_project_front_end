@@ -3,7 +3,7 @@ import Boxes from './components/Boxes';
 import WeekSelector from './components/WeekSelector';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Response from './components/Reponse';
+import Response from './components/Response';
 
 function App() {
   return (

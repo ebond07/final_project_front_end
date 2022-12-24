@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SwipeableViews from 'react-swipeable-views';
-import {submitDay} from './Reponse';
+import {submitDay} from './Response';
 import WeekSelector from './WeekSelector';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
@@ -100,9 +100,6 @@ function Boxes() {
             <button style={{ display: 'block', margin: '0 auto' }}>Update Day</button>
           </div>
         ))}
-      </div>
-      <div style={{ height: '10px' }}>
-      <button style={{ display: 'block', margin: 'auto', marginTop: '15px' }}>Submit Week</button>
       </div>
     </div>
   );
