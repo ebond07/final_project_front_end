@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Ideal Weather Weeks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Link for front-end repository: https://github.com/ebond07/final_project
+Link for back-end repository:
+Link for project presentation video: https://youtu.be/-OOG8VzQD8I
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+The application allows users to create up to four ideal weather weeks in terms of temperature.
+There are drop down menus which allow for the selection of the weeks as well as the deletion of them.
 
-### `npm start`
+The front-end for the project was built on Microsoft Visual Studio Code using React JS and the back-end was built on IntelliJ.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### External Libraries used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+https://fkhadra.github.io/react-toastify/introduction/
 
-### `npm test`
+React-Toastify was used to create pop ups on the side of the window to alert the user whether the requests were succesful
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+https://github.com/oliviertassinari/react-swipeable-views
 
-### `npm run build`
+React-Swipeable-Views were used to allow the user to swipe between three options "Cloudy,Sunny,Rainy" for their day.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Running the Project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run the project you must open both the back-end and the front-end folders on their respective softwares. Then for the front-end you must install the node modules using "npm install" if you do not have the correct modules for the project. Then for the back-end you will have to run the application within IntelliJ.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+From then you can use the front-end as you wish.
 
-### `npm run eject`
+### Challenges Faced
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+There were major challenges faced while developing the project. Firstly, I was not able to implement a get request for getting the data which has been posted to the server. I was not making a proper request and as such was receivingn an error every time I tried to. Secondly, I could not figure out how to implement a put request for updating the days as I was not able to figure out how to obtain the id of the day the user wished to update and within which week it was and then update it.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Both these requests I would really like to implement in the future as they are necessary for the project to be 100% functional. At the moment, the project is only about 75% functional.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Design
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Class Structure
 
-## Learn More
+3 additional components besides app.js were added to keep the code clean.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Firstly, the boxes component was used to generate the boxes which have the counter for the temperature, the two buttons to modify the counter as well as the titles for the days, the sliders, and the button to submit the day. There is also a reset temps button to reset the temperatures for the days that is in the boxes component. The drop down menu for initializing a week is located in the boxes component so that the selected option can be put in a variable and used in the post request made in the boxes component.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Secondly, the weeklyselector component is used to generate the drop down menu for deleting a week.
 
-### Code Splitting
+Finally, the response component is used to generate the function which the buttons in the boxes class use for submitting the days. Inside this class there should also be the get requests which would get the information which has been posted in the boxes class and then display it below the header in the response component.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Database Design
 
-### Analyzing the Bundle Size
+![Screenshot_20221121_044112](https://user-images.githubusercontent.com/43860533/209451092-0fb4f9ca-d4ba-4813-9c21-5dbaf4b0c3c8.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Screenshot_20221224_041420](https://user-images.githubusercontent.com/43860533/209451164-aa937804-d82a-4eb3-bcdf-a1024f6f4a73.png)
 
-### Making a Progressive Web App
+### End Points
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+For posting to a specific week, http://localhost:8080/api/weeks/${weekNumber}/days was used.
+For getting a specific day, http://localhost:8080/api/days/${dayID} should be used.
+For deleting a week, http://localhost:8080/api/weeks/${weekNumber} was used.
+For posting a week and initializing it, http://localhost:8080/api/weeks was used.
+For updating a specific day, http://localhost:8080/api/days/${dayID} should be used.
 
-### Advanced Configuration
+### Front-End 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![Screenshot_20221224_041224](https://user-images.githubusercontent.com/43860533/209451126-64012f78-4054-4c08-af88-08d766abfe1e.png)
 
-### Deployment
+The two drop down menus at the top of the screen are used for selecting the week which you either want to delete or initialize depending on the drop down menu selected.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The buttons to the right of the drop down menus are for confirming you selection and making the equivalent request to the back-end.
 
-### `npm run build` fails to minify
+The button on the left of all the boxes is to reset the counters of all the boxes back to 0.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The buttons inside the boxes are used to update the counter. The + button updates the counter by +1 and the - button updates the counter by -1
+
+The counter itself changes colour depending on its value. When above 0 it is shown in red and when 0 and below it is shown in blue.
