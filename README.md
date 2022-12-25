@@ -1,4 +1,4 @@
-# Ideal Weather Weeks FRont-End
+# Ideal Weather Weeks Front-End
 
 Link for front-end repository: https://github.com/ebond07/final_project <br />
 Link for back-end repository: https://github.com/ebond07/final_project_backend <br />
