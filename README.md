@@ -31,7 +31,7 @@ From then you can use the front-end as you wish.
 
 I faced challenges regarding creating the exact layout that I wanted to for the boxes. Using the div styling was something that took quite a bit of research for me to have exactly the way that I envisioned it.
 
-In the future I would like 
+In the future I would like to make the website more stylish by making it look more attractive than the very minimalistic look it has at the moment.
 
 ## Design
 
