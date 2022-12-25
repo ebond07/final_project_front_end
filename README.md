@@ -1,4 +1,4 @@
-# Ideal Weather Weeks
+# Ideal Weather Weeks FRont-End
 
 Link for front-end repository: https://github.com/ebond07/final_project <br />
 Link for back-end repository: https://github.com/ebond07/final_project_backend <br />
@@ -7,9 +7,9 @@ Link for project presentation video: https://youtu.be/-OOG8VzQD8I <br />
 ## Project Description
 
 The application allows users to create up to four ideal weather weeks in terms of temperature.
-There are drop down menus which allow for the selection of the weeks as well as the deletion of them.
+There are drop down menus which allow for the selection of the weeks as well as the deletion of them. Also buttons used to create days.
 
-The front-end for the project was built on Microsoft Visual Studio Code using React JS and the back-end was built on IntelliJ.
+The front-end for this project was built on Microsoft Visual Studio Code using React JS.
 
 ### External Libraries used
 
@@ -23,15 +23,15 @@ React-Swipeable-Views were used to allow the user to swipe between three options
 
 ### Running the Project
 
-To run the project you must open both the back-end and the front-end folders on their respective softwares. Then for the front-end you must install the node modules using "npm install" if you do not have the correct modules for the project. Then for the back-end you will have to run the application within IntelliJ.
+For the front-end you must install the node modules using "npm install" if you do not have the correct modules for the project.
 
 From then you can use the front-end as you wish.
 
 ### Challenges Faced
 
-There were major challenges faced while developing the project. Firstly, I was not able to implement a get request for getting the data which has been posted to the server. I was not making a proper request and as such was receivingn an error every time I tried to. Secondly, I could not figure out how to implement a put request for updating the days as I was not able to figure out how to obtain the id of the day the user wished to update and within which week it was and then update it.
+I faced challenges regarding creating the exact layout that I wanted to for the boxes. Using the div styling was something that took quite a bit of research for me to have exactly the way that I envisioned it.
 
-Both these requests I would really like to implement in the future as they are necessary for the project to be 100% functional. At the moment, the project is only about 75% functional.
+In the future I would like 
 
 ## Design
 
@@ -44,20 +44,6 @@ Firstly, the boxes component was used to generate the boxes which have the count
 Secondly, the weeklyselector component is used to generate the drop down menu for deleting a week.
 
 Finally, the response component is used to generate the function which the buttons in the boxes class use for submitting the days. Inside this class there should also be the get requests which would get the information which has been posted in the boxes class and then display it below the header in the response component.
-
-### Database Design
-
-![Screenshot_20221121_044112](https://user-images.githubusercontent.com/43860533/209451092-0fb4f9ca-d4ba-4813-9c21-5dbaf4b0c3c8.png)
-
-![Screenshot_20221224_041420](https://user-images.githubusercontent.com/43860533/209451164-aa937804-d82a-4eb3-bcdf-a1024f6f4a73.png)
-
-### End Points
-
-For posting to a specific week, http://localhost:8080/api/weeks/${weekNumber}/days was used.
-For getting a specific day, http://localhost:8080/api/days/${dayID} should be used.
-For deleting a week, http://localhost:8080/api/weeks/${weekNumber} was used.
-For posting a week and initializing it, http://localhost:8080/api/weeks was used.
-For updating a specific day, http://localhost:8080/api/days/${dayID} should be used.
 
 ### Front-End 
 
